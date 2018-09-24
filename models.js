@@ -22,5 +22,11 @@ Plot.belongsToMany(Vegetable, {through: 'vegetable_plot'})
 
 Gardener.belongsTo(Vegetable, {as: 'favorite_vegetable'})
 
+console.log(db.sync)
 
-module.exports = db
+module.exports = {
+    db,
+    Gardener,
+    Plot,
+    Vegetable
+}
